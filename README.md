@@ -7,7 +7,7 @@ Notes:
 There is only one function that can be called, the runSimulation() function.
 There are three different constructors:
 
-  The default constructor will intialize the grid top a 4 by 4.
+  The default constructor will intialize the grid to a 4 by 4.
   
   Overloaded constructor with integer parameter: Enter the size of the grid you would like to play in.
     can only be between 4 and 10. Any bigger seems like cheating. may not be very visually attractive.
