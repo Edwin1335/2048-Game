@@ -254,8 +254,8 @@ void Game::populateMatrix()
 
 /*----------------Finding the Fist inde location for the first number --------------------------*/
 	// Print ot whre the locations were created
-	std::cout << "Fist index picked: " << locationIndex1ver << std::endl;
-	std::cout << "Second index paickede is " << locationIndex1hor << std::endl;
+	//std::cout << "Fist index picked: " << locationIndex1ver << std::endl;
+	//std::cout << "Second index paickede is " << locationIndex1hor << std::endl;
 
 
 
@@ -263,7 +263,7 @@ void Game::populateMatrix()
 	// Seconds location for the vertical can also be anywhere as long 
 	// the second location for horizontal is no the same as the first location horizontal.
 	locationIndex2Ver = rand() % matrixSize;
-	std::cout << "Second location vertical is " << locationIndex2Ver << std::endl;	
+	//std::cout << "Second location vertical is " << locationIndex2Ver << std::endl;	
 
 	// Loop until both(location 1 and location 2) are not in the same place.
 	bool differentLocation = false;
@@ -276,13 +276,13 @@ void Game::populateMatrix()
 		}
 	}
 	// Print out the second horizontal location for the second number.
-	std::cout << "Second Location horizaontal is " << locationIndex2hor << std::endl;
+	//std::cout << "Second Location horizaontal is " << locationIndex2hor << std::endl;
 
 
 /*----------------Finding the thrid index location for the third number------------------------------*/
 	// Third index location for the vertical position for the third number.
 	locationIndex3Ver = rand() % matrixSize;
-	std::cout << "Third Location vertical " << locationIndex3Ver << std::endl;
+	//std::cout << "Third Location vertical " << locationIndex3Ver << std::endl;
 
 	differentLocation = false;
 	while(differentLocation == false)
@@ -304,7 +304,7 @@ void Game::populateMatrix()
 		}
 	}
 	// Printing the horizotla location for the third number.
-	std::cout << "Third Location for horizontal " << locationIndex3Hor << std::endl;
+	//std::cout << "Third Location for horizontal " << locationIndex3Hor << std::endl;
 
 
 /*--------------Spawn in number 2 or 4 on given index------------------------------------------------------*/
@@ -316,7 +316,7 @@ void Game::populateMatrix()
 	*/
 	/*-------------------Number for location one is-----------------------*/
 	int randomNumber = rand() % 10;
-	std:: cout << "First Random number generated: " << randomNumber << std::endl;
+	//std:: cout << "First Random number generated: " << randomNumber << std::endl;
 	if(randomNumber == 9)
 		matrix[locationIndex1ver][locationIndex1hor].number = 4;
 	else 
@@ -324,7 +324,7 @@ void Game::populateMatrix()
 
 	/*-------------------Number for location two is-----------------------*/
 	randomNumber = rand() % 10;
-	std:: cout << "Second Random number generated: " << randomNumber << std::endl;
+	//std:: cout << "Second Random number generated: " << randomNumber << std::endl;
 		if(randomNumber == 9)
 		matrix[locationIndex2Ver][locationIndex2hor].number = 4;
 	else 
@@ -333,12 +333,12 @@ void Game::populateMatrix()
 
 	/*-------------------Number for location three is-----------------------*/
 	randomNumber = rand() % 10;
-		std:: cout << "Second Random number generated: " << randomNumber << std::endl;
+		//std:: cout << "Second Random number generated: " << randomNumber << std::endl;
 		if(randomNumber == 9)
 		matrix[locationIndex3Ver][locationIndex3Hor].number = 4;
 	else 
 		matrix[locationIndex3Ver][locationIndex3Hor].number = 2;
-	std:: cout << "Third Random number generated: " << randomNumber << std::endl;
+	//std:: cout << "Third Random number generated: " << randomNumber << std::endl;
 
 }
 
@@ -367,13 +367,13 @@ void Game::spawinInNewTile()
 	}
 
 	// These print must be the same.
-	std::cout << "Available spaces are: " << counter << std::endl;
-	std::cout << "Size of the list is: " << availableNodes.size() << std::endl;
+	//std::cout << "Available spaces are: " << counter << std::endl;
+	//std::cout << "Size of the list is: " << availableNodes.size() << std::endl;
 
 	// Now we must randomly select an available position to insert a new number.
 	int selectedNode = rand() % counter;
 	int currentNode = 0;
-	std::cout << "Selected node Location is " << (selectedNode + 1) << std::endl;
+	//std::cout << "Selected node Location is " << (selectedNode + 1) << std::endl;
 
 	// Random number of 2-(90 % chance) or 4-(10% chance) to be spawned.
 	int numbertoReplaceEmpty;
@@ -383,7 +383,7 @@ void Game::spawinInNewTile()
 		numbertoReplaceEmpty = 4;
 	else 
 		numbertoReplaceEmpty = 2;
-	std::cout << "Number choose to replace: "  << numbertoReplaceEmpty << std::endl;
+	//std::cout << "Number choose to replace: "  << numbertoReplaceEmpty << std::endl;
 
 	// Instantciate an list iterator
 	std::list<Node*>::iterator iter;
@@ -690,7 +690,6 @@ void Game::moveLeft()
 						matrix[i][column].number = 0;
 						column--;
 					}
-					std::cout << "column: " << column << " " << matrix[i][column-1].number << std::endl;
 					if (matrix[i][column-1].number == 0)
 					{
 						// If or left value is 0, move one more time and update the previous value
@@ -780,7 +779,12 @@ void Game::moveRight()
 void Game::runSimulation()
 {
 
-	// Control is a command that will be used to constrol the move movements.
+    std::cout << "___________________________" << std::endl;
+    std::cout << "|                         |" << std::endl;
+    std::cout << "|    Welcome to 2048 !    |" << std::endl;
+    std::cout << "|                         |" << std::endl;
+    std::cout << "|_________________________|" << std::endl;
+    // Control is a command that will be used to constrol the move movements.
 	char control = '-';
 	
 	// Run until you have merged to 2048 game.
