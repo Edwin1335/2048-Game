@@ -14,11 +14,14 @@ There are three different constructors:
     
   Overloaded constuctor with string parameter: Enter the name of the file to intialize the grid. File must have 
     the size of the grid as well as an overall sketch of the positions of the tiles. 
-    Example: 5
-             0 0 0 0 0
-             4 4 0 0 0
-             2 2 2 2 2
-             0 8 0 0 0
-             0 0 0 0 0
-  
+    </br>
+    Example: 
+    </br>
+             5 </br>
+             0 0 0 0 0</br>
+             4 4 0 0 0</br>
+             2 2 2 2 2</br>
+             0 8 0 0 0</br>
+             0 0 0 0 0</br>
+             </br>
   Finally we can call the runSimulation() funtion to begin playing the game.
